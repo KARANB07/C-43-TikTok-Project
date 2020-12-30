@@ -1,9 +1,11 @@
 var h,m,s,scAngle,hAngle,mAngle;
 function setup() {
-  createCanvas(400,400);
+  createCanvas(displayWidth,displayHeight-150);
 }
 function draw() {
-  background(255, 255, 0);  
+  background(255, 255, 0); 
+  
+  translate(800,200)
   h=hour();
   m=minute();
   s=second();
@@ -30,7 +32,7 @@ function draw() {
   strokeWeight(7);
   line(0,0,80,0);
   pop();
-  hAngle=map(h%12,0,60,0,360)
+  hAngle=map(h,0,12,0,360)
   push();
   translate(200,200)
   rotate(hAngle-90)
